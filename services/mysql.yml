@@ -1,0 +1,15 @@
+  mysql:
+    image: mysql:${MYSQL_VERSION}
+    restart: always
+    user: ${HOST_USER_ID}:${HOST_GROUP_ID}
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    healthcheck:
+      test: "/usr/bin/mysql --user=$${MYSQL_USER} --password=$${MYSQL_PASSWORD} --execute \"SHOW DATABASES;\""
+      interval: 1s
+      retries: 60
