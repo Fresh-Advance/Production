@@ -9,8 +9,9 @@ as easy as possible, but also having more secure enviroment.
 ## What we have here
 
 * Apache 2.4 (based on original httpd:2.4-alpine container)
+  * with https turned on (exchange the certificates in ``containers/httpd/certs`` folder to real ones)
 * PHP 8.3 (based on original php:x.x-fpm containers) with:
-    * composer 2
+  * composer 2
 * MySQL 8.0 (8.0-debian container) as default
 
 ## Requirements

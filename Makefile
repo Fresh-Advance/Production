@@ -25,6 +25,7 @@ setup:
 		     s/<groupId>/$(GROUPID)/;\
 		     s/<groupName>/$(GROUPNAME)/"\
 		> .env
+	@cp -n -r containers/httpd/certs.dist/. containers/httpd/certs
 	@cp -n containers/httpd/project.conf.dist containers/httpd/project.conf
 	@cp -n containers/php-fpm/custom.ini.dist containers/php-fpm/custom.ini
 	@cp -n docker-compose.yml.dist docker-compose.yml
