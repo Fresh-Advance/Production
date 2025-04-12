@@ -1,2 +1,5 @@
-services:
+networks:
+  default:
+    driver: bridge
 
+services:

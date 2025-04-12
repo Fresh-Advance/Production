@@ -1,4 +1,6 @@
   php:
+    networks:
+      - default
     build:
       context: containers/php-fpm
       args:
