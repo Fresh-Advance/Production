@@ -1,6 +1,6 @@
 FROM php:8.3-fpm
 
-ARG RUNTIME_PACKAGE_DEPS="msmtp libfreetype6 libjpeg62-turbo libwebp-dev libavif15 libgd3 unzip rsync libzip-dev ssh libmemcached-dev"
+ARG RUNTIME_PACKAGE_DEPS="msmtp libfreetype6 libjpeg62-turbo libwebp-dev libavif15 libgd3 unzip git rsync libzip-dev ssh libmemcached-dev"
 ARG BUILD_PACKAGE_DEPS="libcurl4-openssl-dev libjpeg-dev libpng-dev libxml2-dev libonig-dev libavif-dev"
 ARG PHP_EXT_DEPS="curl xml mbstring zip bcmath soap pdo_mysql gd mysqli intl"
 
