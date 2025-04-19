@@ -3,9 +3,6 @@ FROM httpd:2.4-alpine
 COPY custom.conf /usr/local/apache2/conf/custom.conf
 COPY project.conf /usr/local/apache2/conf/project.conf
 
-COPY certs/server.crt /usr/local/apache2/conf/server.crt
-COPY certs/server.key /usr/local/apache2/conf/server.key
-
 RUN printf "Include conf/custom.conf\n" >> /usr/local/apache2/conf/httpd.conf && \
     printf "Include conf/project.conf" >> /usr/local/apache2/conf/httpd.conf
 
