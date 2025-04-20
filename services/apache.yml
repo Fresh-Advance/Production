@@ -1,11 +1,14 @@
   apache:
-    networks:
-      - default
     build:
       context: containers/httpd
+    networks:
+      - default
     working_dir: /var/www/
     volumes:
       - ./source:/var/www
+      - ./data/httpd:/var/sync
+      - ./containers/httpd/certs/server.crt:/usr/local/apache2/conf/server.crt:ro
+      - ./containers/httpd/certs/server.key:/usr/local/apache2/conf/server.key:ro
     ports:
       - 80:80
       - 443:443

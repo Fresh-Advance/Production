@@ -1,6 +1,4 @@
   php:
-    networks:
-      - default
     build:
       context: containers/php-fpm
       args:
@@ -9,6 +7,8 @@
         HOST_GROUP_ID: ${HOST_GROUP_ID}
         HOST_USER_NAME: ${HOST_USER_NAME}
         HOST_GROUP_NAME: ${HOST_GROUP_NAME}
+    networks:
+      - default
     volumes:
       - ./source:/var/www
       - ./data/php:/var/sync
