@@ -5,9 +5,3 @@ COPY project.conf /usr/local/apache2/conf/project.conf
 
 RUN printf "Include conf/custom.conf\n" >> /usr/local/apache2/conf/httpd.conf && \
     printf "Include conf/project.conf" >> /usr/local/apache2/conf/httpd.conf
-
-RUN sed -i \
-    -e 's/^#\(Include .*httpd-ssl.conf\)/\1/' \
-    -e 's/^#\(LoadModule .*mod_ssl.so\)/\1/' \
-    -e 's/^#\(LoadModule .*mod_socache_shmcb.so\)/\1/' \
-    /usr/local/apache2/conf/httpd.conf
