@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Deflate module turned on and gzip compression enabled
+- Preconfigure and enable HTTP/2
 
 ## [v1.0.0] - 2025-05-02
 
